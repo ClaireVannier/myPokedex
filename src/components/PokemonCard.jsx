@@ -1,13 +1,15 @@
 function PokemonCard() {
-    let pokemon = pokemonList[1];
+    let pokemon = pokemonList[0];
     return (
         <div>
-            <p>{pokemon.name}</p>
+            <figure>
+                <figcaption>Bulbasaur</figcaption>
             {
-                pokemon.imgSrc ? 
-                <img width = "200" src={pokemon.imgSrc} alt="photo de bulbasaur" /> 
-                : <p>???</p>
+                pokemon.imgSrc ?
+                    <img width="200" src={pokemon.imgSrc} alt="photo de bulbasaur" />
+                    : <p>???</p>
             }
+            </figure>
         </div>
     );
 };
@@ -25,3 +27,5 @@ const pokemonList = [
 
 
 export default PokemonCard;
+
+
