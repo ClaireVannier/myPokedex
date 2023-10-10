@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
 
-function PokemonCard({ pokemon }) {
-    console.log(pokemon);
+function PokemonCard({ pokemon }) {    
     return (
         <div>
             <figure>
