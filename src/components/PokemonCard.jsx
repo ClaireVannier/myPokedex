@@ -23,11 +23,4 @@ PokemonCard.propTypes = {
     }).isRequired,
 };
 
-
-// // SayHello.propTypes = {
-//   wilder: PropTypes.shape({
-//     name: PropTypes.string.isRequired,
-//     languages: PropTypes.arrayOf(PropTypes.string).isRequired,
-//   }).isRequired,
-// } 
 export default PokemonCard;
