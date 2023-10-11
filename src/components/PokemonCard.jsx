@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 
-function PokemonCard({ pokemon }) {    
+function PokemonCard({ pokemon }) {
     return (
         <div>
             <figure>
