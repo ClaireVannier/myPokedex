@@ -1,28 +1,29 @@
-function NavBar({ pokemonList, pokemonIndex, setpokemonIndex }) {
+import React from "react";
 
-    const handlePokemonClick = () => {
-        if (pokemonIndex < pokemonList.length - 1)
-            setpokemonIndex(pokemonIndex + 1);
-        if (pokemonIndex > 0)
-            setpokemonIndex(pokemonIndex - 1);
+function NavBar({ pokemonList, selectedPokemon, setselectedPokemon}) {
+
+    const handlePokemonClick = (pokemon) => {
+        setselectedPokemon(pokemon);
+        if (pokemon.name === "pikachu") {
+            setTimeout(() => {
+            alert("pika pikachu !!!")
+            }, 100)}
     }
-
-
 
     return (
         <div>
             {pokemonList.map((element) =>
-                <button onClick={handlePokemonClick} key={element.name}>{element.name}</button>)}
-        </div>
-    );
-};
+                <button
+                    onClick={() => handlePokemonClick(element)}
+                    key={element.name}
+                    className={element === selectedPokemon ? "active" : ""}
+                >
+                    {element.name}
+                </button>
 
+            )};
+        </div>
+    )
+}
 
 export default NavBar;
-
-
-// {cart.map((article) => (
-//     <li key={article.name}>
-//       {article.emoji} {article.name}
-//       <input type="text" defaultValue={article.name} />
-//       <button onClick={() => removeArticle(article)}>remove</button>
